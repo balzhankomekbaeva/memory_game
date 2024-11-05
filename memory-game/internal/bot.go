@@ -9,7 +9,6 @@ type Bot struct {
 	TgBot *telebot.Bot
 	Chat  *telebot.Chat
 }
-
 func (b *Bot) Update(message string) {
 	_, err := b.TgBot.Send(b.Chat, message)
 	if err != nil {
