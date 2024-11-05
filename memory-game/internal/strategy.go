@@ -14,7 +14,6 @@ func (e *EasyDifficulty) GetBoardSize() (int, int) {
 func (e *EasyDifficulty) GetWinningScore() int64 {
 	return 100
 }
-
 type MediumDifficulty struct{}
 
 func (m *MediumDifficulty) GetBoardSize() (int, int) {

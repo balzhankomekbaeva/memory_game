@@ -1,5 +1,6 @@
 package t_bot
 
+
 type UserInfo interface {
 	GetUser(id int) (*User, error)
 	GetByExternalID(externalID string) (*User, error)
