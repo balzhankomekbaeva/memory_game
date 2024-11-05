@@ -14,4 +14,5 @@ func (b *Bot) Update(message string) {
 	if err != nil {
 		log.Errorf("Error while sending message in observe: %v", err)
 	}
+
 }
