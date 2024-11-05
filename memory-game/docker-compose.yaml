@@ -1,0 +1,24 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  app:
+    image: todo:alpine
+    environment:
+      TG_TOKEN: "1065088890:AAHsp6mSFeTC0mf3sZ5WEi8ODL4ZfxHi1cg"
+    restart: always
+    build: .
+    command: "make run"
+    volumes:
+      - ./app:/go/src/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    links:
+      - db
